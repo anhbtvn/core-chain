@@ -1,0 +1,64 @@
+[Eth]
+NetworkId = 1116
+NoPruning = false
+NoPrefetch = false
+LightPeers = 100
+UltraLightFraction = 75
+TrieTimeout = 100000000000
+EnablePreimageRecording = false
+EWASMInterpreter = ""
+EVMInterpreter = ""
+
+[Eth.Miner]
+GasFloor = 30000000
+GasCeil = 40000000
+GasPrice = 1000000000
+Recommit = 10000000000
+Noverify = false
+
+[Eth.TxPool]
+Locals = []
+NoLocals = true
+Journal = "transactions.rlp"
+Rejournal = 3600000000000
+PriceLimit = 1000000000
+PriceBump = 10
+AccountSlots = 512
+GlobalSlots = 10000
+AccountQueue = 256
+GlobalQueue = 5000
+Lifetime = 10800000000000
+
+[Eth.GPO]
+Blocks = 20
+Percentile = 60
+OracleThreshold = 20
+
+[Node]
+IPCPath = "geth.ipc"
+HTTPHost = "localhost"
+NoUSB = true
+InsecureUnlockAllowed = false
+HTTPPort = 8579
+HTTPVirtualHosts = ["localhost"]
+HTTPModules = ["eth", "net", "web3", "txpool", "satoshi"]
+WSPort = 8580
+WSModules = ["eth", "net", "web3", "txpool", "satoshi"]
+[Node.P2P]
+MaxPeers = 30
+NoDiscovery = false
+BootstrapNodes = ["enode://6334cdde2728b17486e4930c29e85128694faf118c23f559c7502e1cb42dd90a54f785c80c6a493d7d6f5ed23f3c9cf75e0392b024e45f7eadc81a84544a45ff@seed4.coredao.org:0?discport=35022","enode://20b605d5ee978c22bfb9ed208a40f2876d3dfafb1c60a6427c4db28e516520ee610cbc2a1c0ee05dd08578a041dc9070d92cf888422ed0869d0666b5103292b4@seed2.coredao.org:0?discport=35022","enode://04ffc724b82e2c52df47e2439a30ca4c0f7aca5ce270f6c6bcdf539581ce2ae4965afd5c5fe19106cd528ed6f379c68687a41310054ee751a73880b2c73e85d8@seed3.coredao.org:0?discport=35022","enode://e9a218f70debcb6a423d68f287c972c717606a70bfed278c2f7a876493d37bc535b05127abddeeca21941fc61497a6ca13387466c75a070050862ca6da11b0ca@seed1.coredao.org:0?discport=35022"]
+StaticNodes = ["enode://aa997f07ea67aa83ce4269d8d867a1b592eb020ad3983e137f371df078ececdfe8b5e9df4e6e7ac7c95edc5be4314016ccd5ed465abf49ee8d269e03c0302fa8@18.140.54.158:35021","enode://a4efd3a2fc9ae5ac7758e854dee26f8052f7d169690df422a1b0a784821dd9c742fd877f5fc44cdb2415dad5b22e8186fff30ffcbf193f178e8c408d1c12661b@18.140.62.198:35021","enode://2f7cccd01ef5059a100191bd881e1445aa81faf96205a784efb394aab9c5d01d28a12672e1dc808543dc2de5cc455850394a69d1c92b3af33a7d790e923f3793@35.180.135.55:35021","enode://2eebc393d901b127f457a9b8fae5fbe3f3f13172a75dd7f4556a8c16f180033c45eb2470fdd71864a92d0f2ecef8b4b317dff0e15fdf884a18a8affa521ea048@35.180.86.1:35021","enode://e3d64ed01b4ffaabdc0994ee661eddf77f3652305deb37592697285fbcc64ddbfd9a9dbc099db54fbaf94a41515a9b08107b1a17427b04a8345c58fc4b58cfcf@3.17.128.116:35021","enode://31a928a8e2347b8215f1a1d7ec6f5ffe1d2546c239b47f52eb165dca3ce038db73dedf61a577f8333f490f348e25b27d102dba3ec9ea9093973036388b35d027@13.58.157.133:35021"]
+ListenAddr = ":35021"
+EnableMsgEvents = false
+
+[Node.HTTPTimeouts]
+ReadTimeout = 30000000000
+WriteTimeout = 30000000000
+IdleTimeout = 120000000000
+
+[Node.LogConfig]
+FilePath = "logs/core.log"
+MaxBytesSize = 10485760
+Level = "info"
+FileRoot = ""
